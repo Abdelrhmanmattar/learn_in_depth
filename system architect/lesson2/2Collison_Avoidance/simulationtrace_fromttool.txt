@@ -1,0 +1,890 @@
+0 bunchid:0 @0/ 0: start ID=29 / top level operator
+ nexts= 0:avatar transition/ ID=34  in block DC_MOTOR (silent)
+attributes=0 
+1 bunchid:0 @0/ 0: start ID=40 / top level operator
+ nexts= 0:avatar transition/ ID=60  in block MAIN_ALGORTHIM (silent)
+attributes=0 0 50 
+2 bunchid:0 @0/ 0: start ID=81 / top level operator
+ nexts= 0:avatar transition/ ID=86  in block ULTRA_SONIC (silent)
+attributes=0 
+3 bunchid:0 @0/ 0: avatar transition ID=34 / top level operator
+ value: weight:1.0 
+ nexts= 0:init/ ID=28 
+weight=1.0
+ in block DC_MOTOR (silent)
+attributes=0 
+4 bunchid:0 @0/ 0: init ID=28 / top level operator
+ nexts= 0:avatar transition/ ID=33  in block DC_MOTOR (silent)
+attributes=0 
+5 bunchid:0 @0/ 0: avatar transition ID=33 / top level operator
+ value: weight:1.0 
+ nexts= 0:idle/ ID=27 
+weight=1.0
+ in block DC_MOTOR (silent)
+attributes=0 
+6 bunchid:0 @0/ 0: idle ID=27 / top level operator
+ nexts= 0:avatar transition/ ID=32  in block DC_MOTOR (silent)
+attributes=0 
+7 bunchid:0 @0/ 0: avatar transition ID=60 / top level operator
+ value: weight:1.0 
+ nexts= 0:waiting/ ID=39 
+weight=1.0
+ in block MAIN_ALGORTHIM (silent)
+attributes=0 0 50 
+8 bunchid:0 @0/ 0: waiting ID=39 / top level operator
+ nexts= 0:avatar transition/ ID=61  in block MAIN_ALGORTHIM (silent)
+attributes=0 0 50 
+9 bunchid:0 @0/ 0: avatar transition ID=86 / top level operator
+ value: weight:1.0 
+ nexts= 0:init/ ID=80 
+weight=1.0
+ in block ULTRA_SONIC (silent)
+attributes=0 
+10 bunchid:0 @0/ 0: init ID=80 / top level operator
+ nexts= 0:avatar transition/ ID=85  in block ULTRA_SONIC (silent)
+attributes=0 
+11 bunchid:0 @0/ 0: avatar transition ID=85 / top level operator
+ value: weight:1.0 
+ nexts= 0:busy/ ID=79 
+weight=1.0
+ in block ULTRA_SONIC (silent)
+attributes=0 
+12 bunchid:0 @0/ 0: busy ID=79 / top level operator
+ nexts= 0:avatar transition/ ID=84  in block ULTRA_SONIC (silent)
+attributes=0 
+13 bunchid:0 @0/ 0: avatar transition ID=61 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=41 
+weight=1.0
+ in block MAIN_ALGORTHIM
+attributes=0 0 50 
+14 bunchid:0 @0/ 0: Sending signal "DC_SET_SPEED" ID=41 / top level operator
+ nexts= 0:avatar transition/ ID=62  in block MAIN_ALGORTHIM
+attributes=0 0 50 
+15 bunchid:0 @0/ 0: avatar transition ID=32 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=26 
+weight=1.0
+ in block DC_MOTOR
+attributes=0 
+16 bunchid:0 @0/ 0: Receiving signal "DC_SET_SPEED" ID=26 / top level operator
+ nexts= 0:avatar transition/ ID=31  in block DC_MOTOR
+attributes=0 
+action#0: 0 
+17 bunchid:1 @0/ 0: avatar transition ID=62 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=42 
+weight=1.0
+ in block MAIN_ALGORTHIM (silent)
+attributes=0 0 50 
+18 bunchid:1 @0/ 0: avatar transition ID=31 / top level operator
+ value: weight:1.0 
+ nexts= 0:busy/ ID=25 
+weight=1.0
+ in block DC_MOTOR (silent)
+attributes=0 
+19 bunchid:1 @0/ 0: busy ID=25 / top level operator
+ nexts= 0:avatar transition/ ID=30  in block DC_MOTOR (silent)
+attributes=0 
+20 bunchid:1 @0/ 0: avatar transition ID=30 / top level operator
+ value: weight:1.0 
+ nexts= 0:idle/ ID=27 
+weight=1.0
+ in block DC_MOTOR (silent)
+attributes=0 
+21 bunchid:1 @0/ 0: idle ID=27 / top level operator
+ nexts= 0:avatar transition/ ID=32  in block DC_MOTOR (silent)
+attributes=0 
+22 bunchid:1 @0/ 0: avatar transition ID=84 / top level operator
+ value: weight:1.0 
+ nexts= 0:random/ ID=78 
+weight=1.0
+ in block ULTRA_SONIC
+attributes=0 
+23 bunchid:1 @0/ 0: random ID=78 / top level operator
+ nexts= 0:avatar transition/ ID=83  in block ULTRA_SONIC
+attributes=46 
+action#0: distance = 46 
+24 bunchid:2 @0/ 0: avatar transition ID=83 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=77 
+weight=1.0
+ in block ULTRA_SONIC (silent)
+attributes=46 
+25 bunchid:2 @0/ 0: Sending signal "US_GET_DISTANCE" ID=77 / top level operator
+ nexts= 0:avatar transition/ ID=82  in block ULTRA_SONIC
+attributes=46 
+26 bunchid:2 @0/ 0: Receiving signal "US_GET_DISTANCE" ID=42 / top level operator
+ nexts= 0:avatar transition/ ID=63  in block MAIN_ALGORTHIM
+attributes=0 46 50 
+action#0: 46 
+27 bunchid:3 @0/ 0: avatar transition ID=82 / top level operator
+ value: weight:1.0 
+ nexts= 0:busy/ ID=79 
+weight=1.0
+ in block ULTRA_SONIC (silent)
+attributes=46 
+28 bunchid:3 @0/ 0: avatar transition ID=63 / top level operator
+ value: weight:1.0 
+ nexts= 0:choice__1/ ID=43 
+weight=1.0
+ in block MAIN_ALGORTHIM (silent)
+attributes=0 46 50 
+29 bunchid:3 @0/ 0: choice__1 ID=43 / top level operator
+ nexts= 0:avatar transition/ ID=64 1:avatar transition/ ID=70  in block MAIN_ALGORTHIM (silent)
+attributes=0 46 50 
+30 bunchid:3 @0/ 0: busy ID=79 / top level operator
+ nexts= 0:avatar transition/ ID=84  in block ULTRA_SONIC (silent)
+attributes=46 
+31 bunchid:3 @0/ 0: avatar transition ID=64 / top level operator
+ value: weight:1.0  guard=distance <= limit actions:  speed = 0
+ nexts= 0:waiting/ ID=39 
+weight=1.0
+speed = 0 / guard distance <= limit /  in block MAIN_ALGORTHIM
+attributes=0 46 50 
+action#0: speed = 0 
+32 bunchid:4 @0/ 0: waiting ID=39 / top level operator
+ nexts= 0:avatar transition/ ID=61  in block MAIN_ALGORTHIM (silent)
+attributes=0 46 50 
+33 bunchid:4 @0/ 0: avatar transition ID=84 / top level operator
+ value: weight:1.0 
+ nexts= 0:random/ ID=78 
+weight=1.0
+ in block ULTRA_SONIC
+attributes=46 
+34 bunchid:4 @0/ 0: random ID=78 / top level operator
+ nexts= 0:avatar transition/ ID=83  in block ULTRA_SONIC
+attributes=50 
+action#0: distance = 50 
+35 bunchid:5 @0/ 0: avatar transition ID=83 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=77 
+weight=1.0
+ in block ULTRA_SONIC (silent)
+attributes=50 
+36 bunchid:5 @0/ 0: avatar transition ID=61 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=41 
+weight=1.0
+ in block MAIN_ALGORTHIM
+attributes=0 46 50 
+37 bunchid:5 @0/ 0: Sending signal "DC_SET_SPEED" ID=41 / top level operator
+ nexts= 0:avatar transition/ ID=62  in block MAIN_ALGORTHIM
+attributes=0 46 50 
+38 bunchid:5 @0/ 0: avatar transition ID=32 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=26 
+weight=1.0
+ in block DC_MOTOR
+attributes=0 
+39 bunchid:5 @0/ 0: Receiving signal "DC_SET_SPEED" ID=26 / top level operator
+ nexts= 0:avatar transition/ ID=31  in block DC_MOTOR
+attributes=0 
+action#0: 0 
+40 bunchid:6 @0/ 0: avatar transition ID=31 / top level operator
+ value: weight:1.0 
+ nexts= 0:busy/ ID=25 
+weight=1.0
+ in block DC_MOTOR (silent)
+attributes=0 
+41 bunchid:6 @0/ 0: busy ID=25 / top level operator
+ nexts= 0:avatar transition/ ID=30  in block DC_MOTOR (silent)
+attributes=0 
+42 bunchid:6 @0/ 0: avatar transition ID=30 / top level operator
+ value: weight:1.0 
+ nexts= 0:idle/ ID=27 
+weight=1.0
+ in block DC_MOTOR (silent)
+attributes=0 
+43 bunchid:6 @0/ 0: idle ID=27 / top level operator
+ nexts= 0:avatar transition/ ID=32  in block DC_MOTOR (silent)
+attributes=0 
+44 bunchid:6 @0/ 0: avatar transition ID=62 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=42 
+weight=1.0
+ in block MAIN_ALGORTHIM (silent)
+attributes=0 46 50 
+45 bunchid:6 @0/ 0: Sending signal "US_GET_DISTANCE" ID=77 / top level operator
+ nexts= 0:avatar transition/ ID=82  in block ULTRA_SONIC
+attributes=50 
+46 bunchid:6 @0/ 0: Receiving signal "US_GET_DISTANCE" ID=42 / top level operator
+ nexts= 0:avatar transition/ ID=63  in block MAIN_ALGORTHIM
+attributes=0 50 50 
+action#0: 50 
+47 bunchid:7 @0/ 0: avatar transition ID=63 / top level operator
+ value: weight:1.0 
+ nexts= 0:choice__1/ ID=43 
+weight=1.0
+ in block MAIN_ALGORTHIM (silent)
+attributes=0 50 50 
+48 bunchid:7 @0/ 0: avatar transition ID=82 / top level operator
+ value: weight:1.0 
+ nexts= 0:busy/ ID=79 
+weight=1.0
+ in block ULTRA_SONIC (silent)
+attributes=50 
+49 bunchid:7 @0/ 0: busy ID=79 / top level operator
+ nexts= 0:avatar transition/ ID=84  in block ULTRA_SONIC (silent)
+attributes=50 
+50 bunchid:7 @0/ 0: choice__1 ID=43 / top level operator
+ nexts= 0:avatar transition/ ID=64 1:avatar transition/ ID=70  in block MAIN_ALGORTHIM (silent)
+attributes=0 50 50 
+51 bunchid:7 @0/ 0: avatar transition ID=64 / top level operator
+ value: weight:1.0  guard=distance <= limit actions:  speed = 0
+ nexts= 0:waiting/ ID=39 
+weight=1.0
+speed = 0 / guard distance <= limit /  in block MAIN_ALGORTHIM
+attributes=0 50 50 
+action#0: speed = 0 
+52 bunchid:8 @0/ 0: waiting ID=39 / top level operator
+ nexts= 0:avatar transition/ ID=61  in block MAIN_ALGORTHIM (silent)
+attributes=0 50 50 
+53 bunchid:8 @0/ 0: avatar transition ID=84 / top level operator
+ value: weight:1.0 
+ nexts= 0:random/ ID=78 
+weight=1.0
+ in block ULTRA_SONIC
+attributes=50 
+54 bunchid:8 @0/ 0: random ID=78 / top level operator
+ nexts= 0:avatar transition/ ID=83  in block ULTRA_SONIC
+attributes=54 
+action#0: distance = 54 
+55 bunchid:9 @0/ 0: avatar transition ID=83 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=77 
+weight=1.0
+ in block ULTRA_SONIC (silent)
+attributes=54 
+56 bunchid:9 @0/ 0: avatar transition ID=61 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=41 
+weight=1.0
+ in block MAIN_ALGORTHIM
+attributes=0 50 50 
+57 bunchid:9 @0/ 0: Sending signal "DC_SET_SPEED" ID=41 / top level operator
+ nexts= 0:avatar transition/ ID=62  in block MAIN_ALGORTHIM
+attributes=0 50 50 
+58 bunchid:9 @0/ 0: avatar transition ID=32 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=26 
+weight=1.0
+ in block DC_MOTOR
+attributes=0 
+59 bunchid:9 @0/ 0: Receiving signal "DC_SET_SPEED" ID=26 / top level operator
+ nexts= 0:avatar transition/ ID=31  in block DC_MOTOR
+attributes=0 
+action#0: 0 
+60 bunchid:10 @0/ 0: avatar transition ID=31 / top level operator
+ value: weight:1.0 
+ nexts= 0:busy/ ID=25 
+weight=1.0
+ in block DC_MOTOR (silent)
+attributes=0 
+61 bunchid:10 @0/ 0: busy ID=25 / top level operator
+ nexts= 0:avatar transition/ ID=30  in block DC_MOTOR (silent)
+attributes=0 
+62 bunchid:10 @0/ 0: avatar transition ID=62 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=42 
+weight=1.0
+ in block MAIN_ALGORTHIM (silent)
+attributes=0 50 50 
+63 bunchid:10 @0/ 0: avatar transition ID=30 / top level operator
+ value: weight:1.0 
+ nexts= 0:idle/ ID=27 
+weight=1.0
+ in block DC_MOTOR (silent)
+attributes=0 
+64 bunchid:10 @0/ 0: idle ID=27 / top level operator
+ nexts= 0:avatar transition/ ID=32  in block DC_MOTOR (silent)
+attributes=0 
+65 bunchid:10 @0/ 0: Sending signal "US_GET_DISTANCE" ID=77 / top level operator
+ nexts= 0:avatar transition/ ID=82  in block ULTRA_SONIC
+attributes=54 
+66 bunchid:10 @0/ 0: Receiving signal "US_GET_DISTANCE" ID=42 / top level operator
+ nexts= 0:avatar transition/ ID=63  in block MAIN_ALGORTHIM
+attributes=0 54 50 
+action#0: 54 
+67 bunchid:11 @0/ 0: avatar transition ID=63 / top level operator
+ value: weight:1.0 
+ nexts= 0:choice__1/ ID=43 
+weight=1.0
+ in block MAIN_ALGORTHIM (silent)
+attributes=0 54 50 
+68 bunchid:11 @0/ 0: avatar transition ID=82 / top level operator
+ value: weight:1.0 
+ nexts= 0:busy/ ID=79 
+weight=1.0
+ in block ULTRA_SONIC (silent)
+attributes=54 
+69 bunchid:11 @0/ 0: choice__1 ID=43 / top level operator
+ nexts= 0:avatar transition/ ID=64 1:avatar transition/ ID=70  in block MAIN_ALGORTHIM (silent)
+attributes=0 54 50 
+70 bunchid:11 @0/ 0: busy ID=79 / top level operator
+ nexts= 0:avatar transition/ ID=84  in block ULTRA_SONIC (silent)
+attributes=54 
+71 bunchid:11 @0/ 0: avatar transition ID=70 / top level operator
+ value: weight:1.0  guard=distance > limit actions:  speed = 30
+ nexts= 0:driving/ ID=35 
+weight=1.0
+speed = 30 / guard distance > limit /  in block MAIN_ALGORTHIM
+attributes=30 54 50 
+action#0: speed = 30 
+72 bunchid:12 @0/ 0: driving ID=35 / top level operator
+ nexts= 0:avatar transition/ ID=59  in block MAIN_ALGORTHIM (silent)
+attributes=30 54 50 
+73 bunchid:12 @0/ 0: avatar transition ID=59 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=38 
+weight=1.0
+ in block MAIN_ALGORTHIM
+attributes=30 54 50 
+74 bunchid:12 @0/ 0: Sending signal "DC_SET_SPEED" ID=38 / top level operator
+ nexts= 0:avatar transition/ ID=76  in block MAIN_ALGORTHIM
+attributes=30 54 50 
+75 bunchid:12 @0/ 0: avatar transition ID=32 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=26 
+weight=1.0
+ in block DC_MOTOR
+attributes=0 
+76 bunchid:12 @0/ 0: Receiving signal "DC_SET_SPEED" ID=26 / top level operator
+ nexts= 0:avatar transition/ ID=31  in block DC_MOTOR
+attributes=30 
+action#0: 30 
+77 bunchid:13 @0/ 0: avatar transition ID=31 / top level operator
+ value: weight:1.0 
+ nexts= 0:busy/ ID=25 
+weight=1.0
+ in block DC_MOTOR (silent)
+attributes=30 
+78 bunchid:13 @0/ 0: busy ID=25 / top level operator
+ nexts= 0:avatar transition/ ID=30  in block DC_MOTOR (silent)
+attributes=30 
+79 bunchid:13 @0/ 0: avatar transition ID=30 / top level operator
+ value: weight:1.0 
+ nexts= 0:idle/ ID=27 
+weight=1.0
+ in block DC_MOTOR (silent)
+attributes=30 
+80 bunchid:13 @0/ 0: idle ID=27 / top level operator
+ nexts= 0:avatar transition/ ID=32  in block DC_MOTOR (silent)
+attributes=30 
+81 bunchid:13 @0/ 0: avatar transition ID=76 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=37 
+weight=1.0
+ in block MAIN_ALGORTHIM (silent)
+attributes=30 54 50 
+82 bunchid:13 @0/ 0: avatar transition ID=84 / top level operator
+ value: weight:1.0 
+ nexts= 0:random/ ID=78 
+weight=1.0
+ in block ULTRA_SONIC
+attributes=54 
+83 bunchid:13 @0/ 0: random ID=78 / top level operator
+ nexts= 0:avatar transition/ ID=83  in block ULTRA_SONIC
+attributes=46 
+action#0: distance = 46 
+84 bunchid:14 @0/ 0: avatar transition ID=83 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=77 
+weight=1.0
+ in block ULTRA_SONIC (silent)
+attributes=46 
+85 bunchid:14 @0/ 0: Sending signal "US_GET_DISTANCE" ID=77 / top level operator
+ nexts= 0:avatar transition/ ID=82  in block ULTRA_SONIC
+attributes=46 
+86 bunchid:14 @0/ 0: Receiving signal "US_GET_DISTANCE" ID=37 / top level operator
+ nexts= 0:avatar transition/ ID=58  in block MAIN_ALGORTHIM
+attributes=30 46 50 
+action#0: 46 
+87 bunchid:15 @0/ 0: avatar transition ID=58 / top level operator
+ value: weight:1.0 
+ nexts= 0:choice__0/ ID=36 
+weight=1.0
+ in block MAIN_ALGORTHIM (silent)
+attributes=30 46 50 
+88 bunchid:15 @0/ 0: choice__0 ID=36 / top level operator
+ nexts= 0:avatar transition/ ID=44 1:avatar transition/ ID=51  in block MAIN_ALGORTHIM (silent)
+attributes=30 46 50 
+89 bunchid:15 @0/ 0: avatar transition ID=82 / top level operator
+ value: weight:1.0 
+ nexts= 0:busy/ ID=79 
+weight=1.0
+ in block ULTRA_SONIC (silent)
+attributes=46 
+90 bunchid:15 @0/ 0: busy ID=79 / top level operator
+ nexts= 0:avatar transition/ ID=84  in block ULTRA_SONIC (silent)
+attributes=46 
+91 bunchid:15 @0/ 0: avatar transition ID=51 / top level operator
+ value: weight:1.0  guard=distance <= limit actions:  speed = 0
+ nexts= 0:waiting/ ID=39 
+weight=1.0
+speed = 0 / guard distance <= limit /  in block MAIN_ALGORTHIM
+attributes=0 46 50 
+action#0: speed = 0 
+92 bunchid:16 @0/ 0: waiting ID=39 / top level operator
+ nexts= 0:avatar transition/ ID=61  in block MAIN_ALGORTHIM (silent)
+attributes=0 46 50 
+93 bunchid:16 @0/ 0: avatar transition ID=84 / top level operator
+ value: weight:1.0 
+ nexts= 0:random/ ID=78 
+weight=1.0
+ in block ULTRA_SONIC
+attributes=46 
+94 bunchid:16 @0/ 0: random ID=78 / top level operator
+ nexts= 0:avatar transition/ ID=83  in block ULTRA_SONIC
+attributes=53 
+action#0: distance = 53 
+95 bunchid:17 @0/ 0: avatar transition ID=83 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=77 
+weight=1.0
+ in block ULTRA_SONIC (silent)
+attributes=53 
+96 bunchid:17 @0/ 0: avatar transition ID=61 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=41 
+weight=1.0
+ in block MAIN_ALGORTHIM
+attributes=0 46 50 
+97 bunchid:17 @0/ 0: Sending signal "DC_SET_SPEED" ID=41 / top level operator
+ nexts= 0:avatar transition/ ID=62  in block MAIN_ALGORTHIM
+attributes=0 46 50 
+98 bunchid:17 @0/ 0: avatar transition ID=32 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=26 
+weight=1.0
+ in block DC_MOTOR
+attributes=30 
+99 bunchid:17 @0/ 0: Receiving signal "DC_SET_SPEED" ID=26 / top level operator
+ nexts= 0:avatar transition/ ID=31  in block DC_MOTOR
+attributes=0 
+action#0: 0 
+100 bunchid:18 @0/ 0: avatar transition ID=62 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=42 
+weight=1.0
+ in block MAIN_ALGORTHIM (silent)
+attributes=0 46 50 
+101 bunchid:18 @0/ 0: avatar transition ID=31 / top level operator
+ value: weight:1.0 
+ nexts= 0:busy/ ID=25 
+weight=1.0
+ in block DC_MOTOR (silent)
+attributes=0 
+102 bunchid:18 @0/ 0: busy ID=25 / top level operator
+ nexts= 0:avatar transition/ ID=30  in block DC_MOTOR (silent)
+attributes=0 
+103 bunchid:18 @0/ 0: avatar transition ID=30 / top level operator
+ value: weight:1.0 
+ nexts= 0:idle/ ID=27 
+weight=1.0
+ in block DC_MOTOR (silent)
+attributes=0 
+104 bunchid:18 @0/ 0: idle ID=27 / top level operator
+ nexts= 0:avatar transition/ ID=32  in block DC_MOTOR (silent)
+attributes=0 
+105 bunchid:18 @0/ 0: Sending signal "US_GET_DISTANCE" ID=77 / top level operator
+ nexts= 0:avatar transition/ ID=82  in block ULTRA_SONIC
+attributes=53 
+106 bunchid:18 @0/ 0: Receiving signal "US_GET_DISTANCE" ID=42 / top level operator
+ nexts= 0:avatar transition/ ID=63  in block MAIN_ALGORTHIM
+attributes=0 53 50 
+action#0: 53 
+107 bunchid:19 @0/ 0: avatar transition ID=82 / top level operator
+ value: weight:1.0 
+ nexts= 0:busy/ ID=79 
+weight=1.0
+ in block ULTRA_SONIC (silent)
+attributes=53 
+108 bunchid:19 @0/ 0: avatar transition ID=63 / top level operator
+ value: weight:1.0 
+ nexts= 0:choice__1/ ID=43 
+weight=1.0
+ in block MAIN_ALGORTHIM (silent)
+attributes=0 53 50 
+109 bunchid:19 @0/ 0: busy ID=79 / top level operator
+ nexts= 0:avatar transition/ ID=84  in block ULTRA_SONIC (silent)
+attributes=53 
+110 bunchid:19 @0/ 0: choice__1 ID=43 / top level operator
+ nexts= 0:avatar transition/ ID=64 1:avatar transition/ ID=70  in block MAIN_ALGORTHIM (silent)
+attributes=0 53 50 
+111 bunchid:19 @0/ 0: avatar transition ID=70 / top level operator
+ value: weight:1.0  guard=distance > limit actions:  speed = 30
+ nexts= 0:driving/ ID=35 
+weight=1.0
+speed = 30 / guard distance > limit /  in block MAIN_ALGORTHIM
+attributes=30 53 50 
+action#0: speed = 30 
+112 bunchid:20 @0/ 0: driving ID=35 / top level operator
+ nexts= 0:avatar transition/ ID=59  in block MAIN_ALGORTHIM (silent)
+attributes=30 53 50 
+113 bunchid:20 @0/ 0: avatar transition ID=59 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=38 
+weight=1.0
+ in block MAIN_ALGORTHIM
+attributes=30 53 50 
+114 bunchid:20 @0/ 0: Sending signal "DC_SET_SPEED" ID=38 / top level operator
+ nexts= 0:avatar transition/ ID=76  in block MAIN_ALGORTHIM
+attributes=30 53 50 
+115 bunchid:20 @0/ 0: avatar transition ID=32 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=26 
+weight=1.0
+ in block DC_MOTOR
+attributes=0 
+116 bunchid:20 @0/ 0: Receiving signal "DC_SET_SPEED" ID=26 / top level operator
+ nexts= 0:avatar transition/ ID=31  in block DC_MOTOR
+attributes=30 
+action#0: 30 
+117 bunchid:21 @0/ 0: avatar transition ID=31 / top level operator
+ value: weight:1.0 
+ nexts= 0:busy/ ID=25 
+weight=1.0
+ in block DC_MOTOR (silent)
+attributes=30 
+118 bunchid:21 @0/ 0: busy ID=25 / top level operator
+ nexts= 0:avatar transition/ ID=30  in block DC_MOTOR (silent)
+attributes=30 
+119 bunchid:21 @0/ 0: avatar transition ID=76 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=37 
+weight=1.0
+ in block MAIN_ALGORTHIM (silent)
+attributes=30 53 50 
+120 bunchid:21 @0/ 0: avatar transition ID=30 / top level operator
+ value: weight:1.0 
+ nexts= 0:idle/ ID=27 
+weight=1.0
+ in block DC_MOTOR (silent)
+attributes=30 
+121 bunchid:21 @0/ 0: idle ID=27 / top level operator
+ nexts= 0:avatar transition/ ID=32  in block DC_MOTOR (silent)
+attributes=30 
+122 bunchid:21 @0/ 0: avatar transition ID=84 / top level operator
+ value: weight:1.0 
+ nexts= 0:random/ ID=78 
+weight=1.0
+ in block ULTRA_SONIC
+attributes=53 
+123 bunchid:21 @0/ 0: random ID=78 / top level operator
+ nexts= 0:avatar transition/ ID=83  in block ULTRA_SONIC
+attributes=49 
+action#0: distance = 49 
+124 bunchid:22 @0/ 0: avatar transition ID=83 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=77 
+weight=1.0
+ in block ULTRA_SONIC (silent)
+attributes=49 
+125 bunchid:22 @0/ 0: Sending signal "US_GET_DISTANCE" ID=77 / top level operator
+ nexts= 0:avatar transition/ ID=82  in block ULTRA_SONIC
+attributes=49 
+126 bunchid:22 @0/ 0: Receiving signal "US_GET_DISTANCE" ID=37 / top level operator
+ nexts= 0:avatar transition/ ID=58  in block MAIN_ALGORTHIM
+attributes=30 49 50 
+action#0: 49 
+127 bunchid:23 @0/ 0: avatar transition ID=82 / top level operator
+ value: weight:1.0 
+ nexts= 0:busy/ ID=79 
+weight=1.0
+ in block ULTRA_SONIC (silent)
+attributes=49 
+128 bunchid:23 @0/ 0: avatar transition ID=58 / top level operator
+ value: weight:1.0 
+ nexts= 0:choice__0/ ID=36 
+weight=1.0
+ in block MAIN_ALGORTHIM (silent)
+attributes=30 49 50 
+129 bunchid:23 @0/ 0: busy ID=79 / top level operator
+ nexts= 0:avatar transition/ ID=84  in block ULTRA_SONIC (silent)
+attributes=49 
+130 bunchid:23 @0/ 0: choice__0 ID=36 / top level operator
+ nexts= 0:avatar transition/ ID=44 1:avatar transition/ ID=51  in block MAIN_ALGORTHIM (silent)
+attributes=30 49 50 
+131 bunchid:23 @0/ 0: avatar transition ID=51 / top level operator
+ value: weight:1.0  guard=distance <= limit actions:  speed = 0
+ nexts= 0:waiting/ ID=39 
+weight=1.0
+speed = 0 / guard distance <= limit /  in block MAIN_ALGORTHIM
+attributes=0 49 50 
+action#0: speed = 0 
+132 bunchid:24 @0/ 0: waiting ID=39 / top level operator
+ nexts= 0:avatar transition/ ID=61  in block MAIN_ALGORTHIM (silent)
+attributes=0 49 50 
+133 bunchid:24 @0/ 0: avatar transition ID=61 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=41 
+weight=1.0
+ in block MAIN_ALGORTHIM
+attributes=0 49 50 
+134 bunchid:24 @0/ 0: Sending signal "DC_SET_SPEED" ID=41 / top level operator
+ nexts= 0:avatar transition/ ID=62  in block MAIN_ALGORTHIM
+attributes=0 49 50 
+135 bunchid:24 @0/ 0: avatar transition ID=32 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=26 
+weight=1.0
+ in block DC_MOTOR
+attributes=30 
+136 bunchid:24 @0/ 0: Receiving signal "DC_SET_SPEED" ID=26 / top level operator
+ nexts= 0:avatar transition/ ID=31  in block DC_MOTOR
+attributes=0 
+action#0: 0 
+137 bunchid:25 @0/ 0: avatar transition ID=31 / top level operator
+ value: weight:1.0 
+ nexts= 0:busy/ ID=25 
+weight=1.0
+ in block DC_MOTOR (silent)
+attributes=0 
+138 bunchid:25 @0/ 0: busy ID=25 / top level operator
+ nexts= 0:avatar transition/ ID=30  in block DC_MOTOR (silent)
+attributes=0 
+139 bunchid:25 @0/ 0: avatar transition ID=62 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=42 
+weight=1.0
+ in block MAIN_ALGORTHIM (silent)
+attributes=0 49 50 
+140 bunchid:25 @0/ 0: avatar transition ID=30 / top level operator
+ value: weight:1.0 
+ nexts= 0:idle/ ID=27 
+weight=1.0
+ in block DC_MOTOR (silent)
+attributes=0 
+141 bunchid:25 @0/ 0: idle ID=27 / top level operator
+ nexts= 0:avatar transition/ ID=32  in block DC_MOTOR (silent)
+attributes=0 
+142 bunchid:25 @0/ 0: avatar transition ID=84 / top level operator
+ value: weight:1.0 
+ nexts= 0:random/ ID=78 
+weight=1.0
+ in block ULTRA_SONIC
+attributes=49 
+143 bunchid:25 @0/ 0: random ID=78 / top level operator
+ nexts= 0:avatar transition/ ID=83  in block ULTRA_SONIC
+attributes=45 
+action#0: distance = 45 
+144 bunchid:26 @0/ 0: avatar transition ID=83 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=77 
+weight=1.0
+ in block ULTRA_SONIC (silent)
+attributes=45 
+145 bunchid:26 @0/ 0: Sending signal "US_GET_DISTANCE" ID=77 / top level operator
+ nexts= 0:avatar transition/ ID=82  in block ULTRA_SONIC
+attributes=45 
+146 bunchid:26 @0/ 0: Receiving signal "US_GET_DISTANCE" ID=42 / top level operator
+ nexts= 0:avatar transition/ ID=63  in block MAIN_ALGORTHIM
+attributes=0 45 50 
+action#0: 45 
+147 bunchid:27 @0/ 0: avatar transition ID=82 / top level operator
+ value: weight:1.0 
+ nexts= 0:busy/ ID=79 
+weight=1.0
+ in block ULTRA_SONIC (silent)
+attributes=45 
+148 bunchid:27 @0/ 0: busy ID=79 / top level operator
+ nexts= 0:avatar transition/ ID=84  in block ULTRA_SONIC (silent)
+attributes=45 
+149 bunchid:27 @0/ 0: avatar transition ID=63 / top level operator
+ value: weight:1.0 
+ nexts= 0:choice__1/ ID=43 
+weight=1.0
+ in block MAIN_ALGORTHIM (silent)
+attributes=0 45 50 
+150 bunchid:27 @0/ 0: choice__1 ID=43 / top level operator
+ nexts= 0:avatar transition/ ID=64 1:avatar transition/ ID=70  in block MAIN_ALGORTHIM (silent)
+attributes=0 45 50 
+151 bunchid:27 @0/ 0: avatar transition ID=84 / top level operator
+ value: weight:1.0 
+ nexts= 0:random/ ID=78 
+weight=1.0
+ in block ULTRA_SONIC
+attributes=45 
+152 bunchid:27 @0/ 0: random ID=78 / top level operator
+ nexts= 0:avatar transition/ ID=83  in block ULTRA_SONIC
+attributes=49 
+action#0: distance = 49 
+153 bunchid:28 @0/ 0: avatar transition ID=83 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=77 
+weight=1.0
+ in block ULTRA_SONIC (silent)
+attributes=49 
+154 bunchid:28 @0/ 0: avatar transition ID=64 / top level operator
+ value: weight:1.0  guard=distance <= limit actions:  speed = 0
+ nexts= 0:waiting/ ID=39 
+weight=1.0
+speed = 0 / guard distance <= limit /  in block MAIN_ALGORTHIM
+attributes=0 45 50 
+action#0: speed = 0 
+155 bunchid:29 @0/ 0: waiting ID=39 / top level operator
+ nexts= 0:avatar transition/ ID=61  in block MAIN_ALGORTHIM (silent)
+attributes=0 45 50 
+156 bunchid:29 @0/ 0: avatar transition ID=61 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=41 
+weight=1.0
+ in block MAIN_ALGORTHIM
+attributes=0 45 50 
+157 bunchid:29 @0/ 0: Sending signal "DC_SET_SPEED" ID=41 / top level operator
+ nexts= 0:avatar transition/ ID=62  in block MAIN_ALGORTHIM
+attributes=0 45 50 
+158 bunchid:29 @0/ 0: avatar transition ID=32 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=26 
+weight=1.0
+ in block DC_MOTOR
+attributes=0 
+159 bunchid:29 @0/ 0: Receiving signal "DC_SET_SPEED" ID=26 / top level operator
+ nexts= 0:avatar transition/ ID=31  in block DC_MOTOR
+attributes=0 
+action#0: 0 
+160 bunchid:30 @0/ 0: avatar transition ID=62 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=42 
+weight=1.0
+ in block MAIN_ALGORTHIM (silent)
+attributes=0 45 50 
+161 bunchid:30 @0/ 0: avatar transition ID=31 / top level operator
+ value: weight:1.0 
+ nexts= 0:busy/ ID=25 
+weight=1.0
+ in block DC_MOTOR (silent)
+attributes=0 
+162 bunchid:30 @0/ 0: busy ID=25 / top level operator
+ nexts= 0:avatar transition/ ID=30  in block DC_MOTOR (silent)
+attributes=0 
+163 bunchid:30 @0/ 0: avatar transition ID=30 / top level operator
+ value: weight:1.0 
+ nexts= 0:idle/ ID=27 
+weight=1.0
+ in block DC_MOTOR (silent)
+attributes=0 
+164 bunchid:30 @0/ 0: idle ID=27 / top level operator
+ nexts= 0:avatar transition/ ID=32  in block DC_MOTOR (silent)
+attributes=0 
+165 bunchid:30 @0/ 0: Sending signal "US_GET_DISTANCE" ID=77 / top level operator
+ nexts= 0:avatar transition/ ID=82  in block ULTRA_SONIC
+attributes=49 
+166 bunchid:30 @0/ 0: Receiving signal "US_GET_DISTANCE" ID=42 / top level operator
+ nexts= 0:avatar transition/ ID=63  in block MAIN_ALGORTHIM
+attributes=0 49 50 
+action#0: 49 
+167 bunchid:31 @0/ 0: avatar transition ID=82 / top level operator
+ value: weight:1.0 
+ nexts= 0:busy/ ID=79 
+weight=1.0
+ in block ULTRA_SONIC (silent)
+attributes=49 
+168 bunchid:31 @0/ 0: busy ID=79 / top level operator
+ nexts= 0:avatar transition/ ID=84  in block ULTRA_SONIC (silent)
+attributes=49 
+169 bunchid:31 @0/ 0: avatar transition ID=63 / top level operator
+ value: weight:1.0 
+ nexts= 0:choice__1/ ID=43 
+weight=1.0
+ in block MAIN_ALGORTHIM (silent)
+attributes=0 49 50 
+170 bunchid:31 @0/ 0: choice__1 ID=43 / top level operator
+ nexts= 0:avatar transition/ ID=64 1:avatar transition/ ID=70  in block MAIN_ALGORTHIM (silent)
+attributes=0 49 50 
+171 bunchid:31 @0/ 0: avatar transition ID=84 / top level operator
+ value: weight:1.0 
+ nexts= 0:random/ ID=78 
+weight=1.0
+ in block ULTRA_SONIC
+attributes=49 
+172 bunchid:31 @0/ 0: random ID=78 / top level operator
+ nexts= 0:avatar transition/ ID=83  in block ULTRA_SONIC
+attributes=52 
+action#0: distance = 52 
+173 bunchid:32 @0/ 0: avatar transition ID=83 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=77 
+weight=1.0
+ in block ULTRA_SONIC (silent)
+attributes=52 
+174 bunchid:32 @0/ 0: avatar transition ID=64 / top level operator
+ value: weight:1.0  guard=distance <= limit actions:  speed = 0
+ nexts= 0:waiting/ ID=39 
+weight=1.0
+speed = 0 / guard distance <= limit /  in block MAIN_ALGORTHIM
+attributes=0 49 50 
+action#0: speed = 0 
+175 bunchid:33 @0/ 0: waiting ID=39 / top level operator
+ nexts= 0:avatar transition/ ID=61  in block MAIN_ALGORTHIM (silent)
+attributes=0 49 50 
+176 bunchid:33 @0/ 0: avatar transition ID=61 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=41 
+weight=1.0
+ in block MAIN_ALGORTHIM
+attributes=0 49 50 
+177 bunchid:33 @0/ 0: Sending signal "DC_SET_SPEED" ID=41 / top level operator
+ nexts= 0:avatar transition/ ID=62  in block MAIN_ALGORTHIM
+attributes=0 49 50 
+178 bunchid:33 @0/ 0: avatar transition ID=32 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=26 
+weight=1.0
+ in block DC_MOTOR
+attributes=0 
+179 bunchid:33 @0/ 0: Receiving signal "DC_SET_SPEED" ID=26 / top level operator
+ nexts= 0:avatar transition/ ID=31  in block DC_MOTOR
+attributes=0 
+action#0: 0 
+180 bunchid:34 @0/ 0: avatar transition ID=62 / top level operator
+ value: weight:1.0 
+ nexts= 0:action_on_signal/ ID=42 
+weight=1.0
+ in block MAIN_ALGORTHIM (silent)
+attributes=0 49 50 
+181 bunchid:34 @0/ 0: avatar transition ID=31 / top level operator
+ value: weight:1.0 
+ nexts= 0:busy/ ID=25 
+weight=1.0
+ in block DC_MOTOR (silent)
+attributes=0 
+182 bunchid:34 @0/ 0: busy ID=25 / top level operator
+ nexts= 0:avatar transition/ ID=30  in block DC_MOTOR (silent)
+attributes=0 
+183 bunchid:34 @0/ 0: avatar transition ID=30 / top level operator
+ value: weight:1.0 
+ nexts= 0:idle/ ID=27 
+weight=1.0
+ in block DC_MOTOR (silent)
+attributes=0 
+184 bunchid:34 @0/ 0: idle ID=27 / top level operator
+ nexts= 0:avatar transition/ ID=32  in block DC_MOTOR (silent)
+attributes=0 
+185 bunchid:34 @0/ 0: Sending signal "US_GET_DISTANCE" ID=77 / top level operator
+ nexts= 0:avatar transition/ ID=82  in block ULTRA_SONIC
+attributes=52 
+186 bunchid:34 @0/ 0: Receiving signal "US_GET_DISTANCE" ID=42 / top level operator
+ nexts= 0:avatar transition/ ID=63  in block MAIN_ALGORTHIM
+attributes=0 52 50 
+action#0: 52 
+187 bunchid:35 @0/ 0: avatar transition ID=82 / top level operator
+ value: weight:1.0 
+ nexts= 0:busy/ ID=79 
+weight=1.0
+ in block ULTRA_SONIC (silent)
+attributes=52 
+188 bunchid:35 @0/ 0: busy ID=79 / top level operator
+ nexts= 0:avatar transition/ ID=84  in block ULTRA_SONIC (silent)
+attributes=52 
+189 bunchid:35 @0/ 0: avatar transition ID=63 / top level operator
+ value: weight:1.0 
+ nexts= 0:choice__1/ ID=43 
+weight=1.0
+ in block MAIN_ALGORTHIM (silent)
+attributes=0 52 50 
+190 bunchid:35 @0/ 0: choice__1 ID=43 / top level operator
+ nexts= 0:avatar transition/ ID=64 1:avatar transition/ ID=70  in block MAIN_ALGORTHIM (silent)
+attributes=0 52 50 

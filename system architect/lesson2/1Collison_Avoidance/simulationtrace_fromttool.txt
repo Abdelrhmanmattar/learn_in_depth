@@ -1,0 +1,408 @@
+0 bunchid:0 @0/ 0: start ID=13 / top level operator
+ nexts= 0:avatar transition/ ID=31  in block Block (silent)
+attributes=0 0 50 
+1 bunchid:0 @0/ 0: avatar transition ID=31 / top level operator
+ value: weight:1.0 
+ nexts= 0:waiting/ ID=12 
+weight=1.0
+ in block Block (silent)
+attributes=0 0 50 
+2 bunchid:0 @0/ 0: waiting ID=12 / top level operator
+ nexts= 0:avatar transition/ ID=32  in block Block (silent)
+attributes=0 0 50 
+3 bunchid:0 @0/ 0: avatar transition ID=32 / top level operator
+ value: weight:1.0 
+ nexts= 0:random/ ID=14 
+weight=1.0
+ in block Block
+attributes=0 0 50 
+4 bunchid:0 @0/ 0: random ID=14 / top level operator
+ nexts= 0:avatar transition/ ID=33  in block Block
+attributes=50 0 50 
+action#0: distance = 50 
+5 bunchid:1 @0/ 0: avatar transition ID=33 / top level operator
+ value: weight:1.0 
+ nexts= 0:choice__1/ ID=15 
+weight=1.0
+ in block Block (silent)
+attributes=50 0 50 
+6 bunchid:1 @0/ 0: choice__1 ID=15 / top level operator
+ nexts= 0:avatar transition/ ID=23 1:avatar transition/ ID=34  in block Block (silent)
+attributes=50 0 50 
+7 bunchid:1 @0/ 0: avatar transition ID=34 / top level operator
+ value: weight:1.0  guard=distance <= limit actions:  speed = 0
+ nexts= 0:waiting/ ID=12 
+weight=1.0
+speed = 0 / guard distance <= limit /  in block Block
+attributes=50 0 50 
+action#0: speed = 0 
+8 bunchid:2 @0/ 0: waiting ID=12 / top level operator
+ nexts= 0:avatar transition/ ID=32  in block Block (silent)
+attributes=50 0 50 
+9 bunchid:2 @0/ 0: avatar transition ID=32 / top level operator
+ value: weight:1.0 
+ nexts= 0:random/ ID=14 
+weight=1.0
+ in block Block
+attributes=50 0 50 
+10 bunchid:2 @0/ 0: random ID=14 / top level operator
+ nexts= 0:avatar transition/ ID=33  in block Block
+attributes=52 0 50 
+action#0: distance = 52 
+11 bunchid:3 @0/ 0: avatar transition ID=33 / top level operator
+ value: weight:1.0 
+ nexts= 0:choice__1/ ID=15 
+weight=1.0
+ in block Block (silent)
+attributes=52 0 50 
+12 bunchid:3 @0/ 0: choice__1 ID=15 / top level operator
+ nexts= 0:avatar transition/ ID=23 1:avatar transition/ ID=34  in block Block (silent)
+attributes=52 0 50 
+13 bunchid:3 @0/ 0: avatar transition ID=23 / top level operator
+ value: weight:1.0  guard=distance > limit actions:  speed = 30
+ nexts= 0:driving/ ID=9 
+weight=1.0
+speed = 30 / guard distance > limit /  in block Block
+attributes=52 30 50 
+action#0: speed = 30 
+14 bunchid:4 @0/ 0: driving ID=9 / top level operator
+ nexts= 0:avatar transition/ ID=30  in block Block (silent)
+attributes=52 30 50 
+15 bunchid:4 @0/ 0: avatar transition ID=30 / top level operator
+ value: weight:1.0 
+ nexts= 0:random/ ID=11 
+weight=1.0
+ in block Block
+attributes=52 30 50 
+16 bunchid:4 @0/ 0: random ID=11 / top level operator
+ nexts= 0:avatar transition/ ID=40  in block Block
+attributes=51 30 50 
+action#0: distance = 51 
+17 bunchid:5 @0/ 0: avatar transition ID=40 / top level operator
+ value: weight:1.0 
+ nexts= 0:choice__0/ ID=10 
+weight=1.0
+ in block Block (silent)
+attributes=51 30 50 
+18 bunchid:5 @0/ 0: choice__0 ID=10 / top level operator
+ nexts= 0:avatar transition/ ID=16 1:avatar transition/ ID=41  in block Block (silent)
+attributes=51 30 50 
+19 bunchid:5 @0/ 0: avatar transition ID=41 / top level operator
+ value: weight:1.0  guard=distance > limit actions:  speed = 30
+ nexts= 0:driving/ ID=9 
+weight=1.0
+speed = 30 / guard distance > limit /  in block Block
+attributes=51 30 50 
+action#0: speed = 30 
+20 bunchid:6 @0/ 0: driving ID=9 / top level operator
+ nexts= 0:avatar transition/ ID=30  in block Block (silent)
+attributes=51 30 50 
+21 bunchid:6 @0/ 0: avatar transition ID=30 / top level operator
+ value: weight:1.0 
+ nexts= 0:random/ ID=11 
+weight=1.0
+ in block Block
+attributes=51 30 50 
+22 bunchid:6 @0/ 0: random ID=11 / top level operator
+ nexts= 0:avatar transition/ ID=40  in block Block
+attributes=55 30 50 
+action#0: distance = 55 
+23 bunchid:7 @0/ 0: avatar transition ID=40 / top level operator
+ value: weight:1.0 
+ nexts= 0:choice__0/ ID=10 
+weight=1.0
+ in block Block (silent)
+attributes=55 30 50 
+24 bunchid:7 @0/ 0: choice__0 ID=10 / top level operator
+ nexts= 0:avatar transition/ ID=16 1:avatar transition/ ID=41  in block Block (silent)
+attributes=55 30 50 
+25 bunchid:7 @0/ 0: avatar transition ID=41 / top level operator
+ value: weight:1.0  guard=distance > limit actions:  speed = 30
+ nexts= 0:driving/ ID=9 
+weight=1.0
+speed = 30 / guard distance > limit /  in block Block
+attributes=55 30 50 
+action#0: speed = 30 
+26 bunchid:8 @0/ 0: driving ID=9 / top level operator
+ nexts= 0:avatar transition/ ID=30  in block Block (silent)
+attributes=55 30 50 
+27 bunchid:8 @0/ 0: avatar transition ID=30 / top level operator
+ value: weight:1.0 
+ nexts= 0:random/ ID=11 
+weight=1.0
+ in block Block
+attributes=55 30 50 
+28 bunchid:8 @0/ 0: random ID=11 / top level operator
+ nexts= 0:avatar transition/ ID=40  in block Block
+attributes=48 30 50 
+action#0: distance = 48 
+29 bunchid:9 @0/ 0: avatar transition ID=40 / top level operator
+ value: weight:1.0 
+ nexts= 0:choice__0/ ID=10 
+weight=1.0
+ in block Block (silent)
+attributes=48 30 50 
+30 bunchid:9 @0/ 0: choice__0 ID=10 / top level operator
+ nexts= 0:avatar transition/ ID=16 1:avatar transition/ ID=41  in block Block (silent)
+attributes=48 30 50 
+31 bunchid:9 @0/ 0: avatar transition ID=16 / top level operator
+ value: weight:1.0  guard=distance <= limit actions:  speed = 0
+ nexts= 0:waiting/ ID=12 
+weight=1.0
+speed = 0 / guard distance <= limit /  in block Block
+attributes=48 0 50 
+action#0: speed = 0 
+32 bunchid:10 @0/ 0: waiting ID=12 / top level operator
+ nexts= 0:avatar transition/ ID=32  in block Block (silent)
+attributes=48 0 50 
+33 bunchid:10 @0/ 0: avatar transition ID=32 / top level operator
+ value: weight:1.0 
+ nexts= 0:random/ ID=14 
+weight=1.0
+ in block Block
+attributes=48 0 50 
+34 bunchid:10 @0/ 0: random ID=14 / top level operator
+ nexts= 0:avatar transition/ ID=33  in block Block
+attributes=53 0 50 
+action#0: distance = 53 
+35 bunchid:11 @0/ 0: avatar transition ID=33 / top level operator
+ value: weight:1.0 
+ nexts= 0:choice__1/ ID=15 
+weight=1.0
+ in block Block (silent)
+attributes=53 0 50 
+36 bunchid:11 @0/ 0: choice__1 ID=15 / top level operator
+ nexts= 0:avatar transition/ ID=23 1:avatar transition/ ID=34  in block Block (silent)
+attributes=53 0 50 
+37 bunchid:11 @0/ 0: avatar transition ID=23 / top level operator
+ value: weight:1.0  guard=distance > limit actions:  speed = 30
+ nexts= 0:driving/ ID=9 
+weight=1.0
+speed = 30 / guard distance > limit /  in block Block
+attributes=53 30 50 
+action#0: speed = 30 
+38 bunchid:12 @0/ 0: driving ID=9 / top level operator
+ nexts= 0:avatar transition/ ID=30  in block Block (silent)
+attributes=53 30 50 
+39 bunchid:12 @0/ 0: avatar transition ID=30 / top level operator
+ value: weight:1.0 
+ nexts= 0:random/ ID=11 
+weight=1.0
+ in block Block
+attributes=53 30 50 
+40 bunchid:12 @0/ 0: random ID=11 / top level operator
+ nexts= 0:avatar transition/ ID=40  in block Block
+attributes=46 30 50 
+action#0: distance = 46 
+41 bunchid:13 @0/ 0: avatar transition ID=40 / top level operator
+ value: weight:1.0 
+ nexts= 0:choice__0/ ID=10 
+weight=1.0
+ in block Block (silent)
+attributes=46 30 50 
+42 bunchid:13 @0/ 0: choice__0 ID=10 / top level operator
+ nexts= 0:avatar transition/ ID=16 1:avatar transition/ ID=41  in block Block (silent)
+attributes=46 30 50 
+43 bunchid:13 @0/ 0: avatar transition ID=16 / top level operator
+ value: weight:1.0  guard=distance <= limit actions:  speed = 0
+ nexts= 0:waiting/ ID=12 
+weight=1.0
+speed = 0 / guard distance <= limit /  in block Block
+attributes=46 0 50 
+action#0: speed = 0 
+44 bunchid:14 @0/ 0: waiting ID=12 / top level operator
+ nexts= 0:avatar transition/ ID=32  in block Block (silent)
+attributes=46 0 50 
+45 bunchid:14 @0/ 0: avatar transition ID=32 / top level operator
+ value: weight:1.0 
+ nexts= 0:random/ ID=14 
+weight=1.0
+ in block Block
+attributes=46 0 50 
+46 bunchid:14 @0/ 0: random ID=14 / top level operator
+ nexts= 0:avatar transition/ ID=33  in block Block
+attributes=55 0 50 
+action#0: distance = 55 
+47 bunchid:15 @0/ 0: avatar transition ID=33 / top level operator
+ value: weight:1.0 
+ nexts= 0:choice__1/ ID=15 
+weight=1.0
+ in block Block (silent)
+attributes=55 0 50 
+48 bunchid:15 @0/ 0: choice__1 ID=15 / top level operator
+ nexts= 0:avatar transition/ ID=23 1:avatar transition/ ID=34  in block Block (silent)
+attributes=55 0 50 
+49 bunchid:15 @0/ 0: avatar transition ID=23 / top level operator
+ value: weight:1.0  guard=distance > limit actions:  speed = 30
+ nexts= 0:driving/ ID=9 
+weight=1.0
+speed = 30 / guard distance > limit /  in block Block
+attributes=55 30 50 
+action#0: speed = 30 
+50 bunchid:16 @0/ 0: driving ID=9 / top level operator
+ nexts= 0:avatar transition/ ID=30  in block Block (silent)
+attributes=55 30 50 
+51 bunchid:16 @0/ 0: avatar transition ID=30 / top level operator
+ value: weight:1.0 
+ nexts= 0:random/ ID=11 
+weight=1.0
+ in block Block
+attributes=55 30 50 
+52 bunchid:16 @0/ 0: random ID=11 / top level operator
+ nexts= 0:avatar transition/ ID=40  in block Block
+attributes=50 30 50 
+action#0: distance = 50 
+53 bunchid:17 @0/ 0: avatar transition ID=40 / top level operator
+ value: weight:1.0 
+ nexts= 0:choice__0/ ID=10 
+weight=1.0
+ in block Block (silent)
+attributes=50 30 50 
+54 bunchid:17 @0/ 0: choice__0 ID=10 / top level operator
+ nexts= 0:avatar transition/ ID=16 1:avatar transition/ ID=41  in block Block (silent)
+attributes=50 30 50 
+55 bunchid:17 @0/ 0: avatar transition ID=16 / top level operator
+ value: weight:1.0  guard=distance <= limit actions:  speed = 0
+ nexts= 0:waiting/ ID=12 
+weight=1.0
+speed = 0 / guard distance <= limit /  in block Block
+attributes=50 0 50 
+action#0: speed = 0 
+56 bunchid:18 @0/ 0: waiting ID=12 / top level operator
+ nexts= 0:avatar transition/ ID=32  in block Block (silent)
+attributes=50 0 50 
+57 bunchid:18 @0/ 0: avatar transition ID=32 / top level operator
+ value: weight:1.0 
+ nexts= 0:random/ ID=14 
+weight=1.0
+ in block Block
+attributes=50 0 50 
+58 bunchid:18 @0/ 0: random ID=14 / top level operator
+ nexts= 0:avatar transition/ ID=33  in block Block
+attributes=49 0 50 
+action#0: distance = 49 
+59 bunchid:19 @0/ 0: avatar transition ID=33 / top level operator
+ value: weight:1.0 
+ nexts= 0:choice__1/ ID=15 
+weight=1.0
+ in block Block (silent)
+attributes=49 0 50 
+60 bunchid:19 @0/ 0: choice__1 ID=15 / top level operator
+ nexts= 0:avatar transition/ ID=23 1:avatar transition/ ID=34  in block Block (silent)
+attributes=49 0 50 
+61 bunchid:19 @0/ 0: avatar transition ID=34 / top level operator
+ value: weight:1.0  guard=distance <= limit actions:  speed = 0
+ nexts= 0:waiting/ ID=12 
+weight=1.0
+speed = 0 / guard distance <= limit /  in block Block
+attributes=49 0 50 
+action#0: speed = 0 
+62 bunchid:20 @0/ 0: waiting ID=12 / top level operator
+ nexts= 0:avatar transition/ ID=32  in block Block (silent)
+attributes=49 0 50 
+63 bunchid:20 @0/ 0: avatar transition ID=32 / top level operator
+ value: weight:1.0 
+ nexts= 0:random/ ID=14 
+weight=1.0
+ in block Block
+attributes=49 0 50 
+64 bunchid:20 @0/ 0: random ID=14 / top level operator
+ nexts= 0:avatar transition/ ID=33  in block Block
+attributes=49 0 50 
+action#0: distance = 49 
+65 bunchid:21 @0/ 0: avatar transition ID=33 / top level operator
+ value: weight:1.0 
+ nexts= 0:choice__1/ ID=15 
+weight=1.0
+ in block Block (silent)
+attributes=49 0 50 
+66 bunchid:21 @0/ 0: choice__1 ID=15 / top level operator
+ nexts= 0:avatar transition/ ID=23 1:avatar transition/ ID=34  in block Block (silent)
+attributes=49 0 50 
+67 bunchid:21 @0/ 0: avatar transition ID=34 / top level operator
+ value: weight:1.0  guard=distance <= limit actions:  speed = 0
+ nexts= 0:waiting/ ID=12 
+weight=1.0
+speed = 0 / guard distance <= limit /  in block Block
+attributes=49 0 50 
+action#0: speed = 0 
+68 bunchid:22 @0/ 0: waiting ID=12 / top level operator
+ nexts= 0:avatar transition/ ID=32  in block Block (silent)
+attributes=49 0 50 
+69 bunchid:22 @0/ 0: avatar transition ID=32 / top level operator
+ value: weight:1.0 
+ nexts= 0:random/ ID=14 
+weight=1.0
+ in block Block
+attributes=49 0 50 
+70 bunchid:22 @0/ 0: random ID=14 / top level operator
+ nexts= 0:avatar transition/ ID=33  in block Block
+attributes=53 0 50 
+action#0: distance = 53 
+71 bunchid:23 @0/ 0: avatar transition ID=33 / top level operator
+ value: weight:1.0 
+ nexts= 0:choice__1/ ID=15 
+weight=1.0
+ in block Block (silent)
+attributes=53 0 50 
+72 bunchid:23 @0/ 0: choice__1 ID=15 / top level operator
+ nexts= 0:avatar transition/ ID=23 1:avatar transition/ ID=34  in block Block (silent)
+attributes=53 0 50 
+73 bunchid:23 @0/ 0: avatar transition ID=23 / top level operator
+ value: weight:1.0  guard=distance > limit actions:  speed = 30
+ nexts= 0:driving/ ID=9 
+weight=1.0
+speed = 30 / guard distance > limit /  in block Block
+attributes=53 30 50 
+action#0: speed = 30 
+74 bunchid:24 @0/ 0: driving ID=9 / top level operator
+ nexts= 0:avatar transition/ ID=30  in block Block (silent)
+attributes=53 30 50 
+75 bunchid:24 @0/ 0: avatar transition ID=30 / top level operator
+ value: weight:1.0 
+ nexts= 0:random/ ID=11 
+weight=1.0
+ in block Block
+attributes=53 30 50 
+76 bunchid:24 @0/ 0: random ID=11 / top level operator
+ nexts= 0:avatar transition/ ID=40  in block Block
+attributes=45 30 50 
+action#0: distance = 45 
+77 bunchid:25 @0/ 0: avatar transition ID=40 / top level operator
+ value: weight:1.0 
+ nexts= 0:choice__0/ ID=10 
+weight=1.0
+ in block Block (silent)
+attributes=45 30 50 
+78 bunchid:25 @0/ 0: choice__0 ID=10 / top level operator
+ nexts= 0:avatar transition/ ID=16 1:avatar transition/ ID=41  in block Block (silent)
+attributes=45 30 50 
+79 bunchid:25 @0/ 0: avatar transition ID=16 / top level operator
+ value: weight:1.0  guard=distance <= limit actions:  speed = 0
+ nexts= 0:waiting/ ID=12 
+weight=1.0
+speed = 0 / guard distance <= limit /  in block Block
+attributes=45 0 50 
+action#0: speed = 0 
+80 bunchid:26 @0/ 0: waiting ID=12 / top level operator
+ nexts= 0:avatar transition/ ID=32  in block Block (silent)
+attributes=45 0 50 
+81 bunchid:26 @0/ 0: avatar transition ID=32 / top level operator
+ value: weight:1.0 
+ nexts= 0:random/ ID=14 
+weight=1.0
+ in block Block
+attributes=45 0 50 
+82 bunchid:26 @0/ 0: random ID=14 / top level operator
+ nexts= 0:avatar transition/ ID=33  in block Block
+attributes=46 0 50 
+action#0: distance = 46 
+83 bunchid:27 @0/ 0: avatar transition ID=33 / top level operator
+ value: weight:1.0 
+ nexts= 0:choice__1/ ID=15 
+weight=1.0
+ in block Block (silent)
+attributes=46 0 50 
+84 bunchid:27 @0/ 0: choice__1 ID=15 / top level operator
+ nexts= 0:avatar transition/ ID=23 1:avatar transition/ ID=34  in block Block (silent)
+attributes=46 0 50 

@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.21)
-project(student_mangment C)
+project(D:\LEARN IN DEPTH\GIT\learn_in_depth\first_term_projects\Student Management System C)
 
 set(CMAKE_C_STANDARD 99)
 

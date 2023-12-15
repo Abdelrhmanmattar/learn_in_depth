@@ -163,7 +163,7 @@ void get_student_by_name(S_FIFO *fifo , char *name , STUDENT **output)
     element_type *temp = fifo->tail;
     for(int i=0;i< FIFO_Size(fifo);i++)
     {
-        if(strcmp(temp->first_name,name) == 0)
+        if(stricmp(temp->first_name,name) == 0)
         {
             *output = temp;
             output++;

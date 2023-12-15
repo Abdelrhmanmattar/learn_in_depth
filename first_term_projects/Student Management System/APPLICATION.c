@@ -52,10 +52,9 @@ void TASK_THREE(S_FIFO *fifo)
 }
 void TASK_FOUR(S_FIFO *fifo)
 {
-    char name[20]="ADEL"; int i;
-
-   /* printf("Enter Student First Name : ");
-    gets(name);*/
+    char name[20]; int i;
+    printf("Enter Student First Name : ");
+    gets(name);
     fflush(stdin);
 
     STUDENT *student_arrray[MAX_STUDENTS] = {0};
@@ -88,7 +87,11 @@ void TASK_FIVE(S_FIFO *fifo)
 }
 void TASK_SIX( S_FIFO *fifo)
 {
-    printf("Total Number Of Students : %d\n",get_student_count( fifo));
+    int Number_Of_Students = get_student_count( fifo);
+    int empty_slots = MAX_STUDENTS - Number_Of_Students;
+
+    printf("Total Number Of Students : %d\n", Number_Of_Students);
+    printf("Empty Slots : %d\n", empty_slots);
 }
 void TASK_SEVEN(S_FIFO *fifo)
 {

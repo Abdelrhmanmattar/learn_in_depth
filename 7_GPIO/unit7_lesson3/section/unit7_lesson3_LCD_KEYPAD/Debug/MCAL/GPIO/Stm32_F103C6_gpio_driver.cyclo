@@ -1,0 +1,8 @@
+../MCAL/GPIO/Stm32_F103C6_gpio_driver.c:3:6:MCAL_GPIO_Init	5
+../MCAL/GPIO/Stm32_F103C6_gpio_driver.c:30:6:MCAL_GPIO_DeInit	1
+../MCAL/GPIO/Stm32_F103C6_gpio_driver.c:39:9:MCAL_GPIO_ReadPin	1
+../MCAL/GPIO/Stm32_F103C6_gpio_driver.c:44:10:MCAL_GPIO_ReadPort	1
+../MCAL/GPIO/Stm32_F103C6_gpio_driver.c:49:6:MCAL_GPIO_WritePin	2
+../MCAL/GPIO/Stm32_F103C6_gpio_driver.c:61:6:MCAL_GPIO_WritePort	1
+../MCAL/GPIO/Stm32_F103C6_gpio_driver.c:65:6:MCAL_GPIO_TogglePin	1
+../MCAL/GPIO/Stm32_F103C6_gpio_driver.c:70:9:MCAL_GPIO_LockPin	2

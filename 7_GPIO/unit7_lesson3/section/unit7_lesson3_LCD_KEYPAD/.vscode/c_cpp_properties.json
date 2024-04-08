@@ -1,0 +1,31 @@
+{
+    "configurations": [
+        {
+            "name": "Win32",
+            "includePath": [
+                "${default}",
+                "${workspaceFolder}/MCAL",
+                "${workspaceFolder}/MCAL/GPIO",
+                "${workspaceFolder}/HAL/LCD_DRIVER",
+                "${workspaceFolder}/HAL/KEYPAD_DRIVER",
+                "${workspaceFolder}/HAL/Segment_7",
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE",
+                "./Src/main.d",
+                "./Src/syscalls.d",
+                "./Src/sysmem.d",
+                "./MCAL/GPIO/Stm32_F103C6_gpio_driver.d ",
+                "./Startup/startup_stm32f103c6tx.d "
+            ],
+            "windowsSdkVersion": "10.0.19041.0",
+            "compilerPath": "cl.exe",
+            "cStandard": "c17",
+            "cppStandard": "c++17",
+            "intelliSenseMode": "windows-msvc-x64"
+        }
+    ],
+    "version": 4
+}

@@ -4,8 +4,9 @@
 //-----------------------------
 //Includes
 //-----------------------------
-#include <stdint.h>
+#include <stdio.h>
 #include "stdlib.h"
+#include "inttypes.h"
 //-----------------------------
 //Base addresses for Memories
 //-----------------------------
@@ -14,7 +15,7 @@
 #define SRAM_BASE                               0x20000000UL
 #define Peripherals_BASE                        0x40000000UL
 #define Cortex_M3_Internal_Peripherals_BASE     0xE0000000UL
-
+#define NVIC_BASE                               0xE000E100UL // @ref to NVIC register map
 //-----------------------------
 //Base addresses for AHB Peripherals
 //-----------------------------
@@ -40,8 +41,11 @@
 //E not included in LQFP48 Package
 #define GPIOE_BASE                              0x40011800UL
 
+//differance between GPIOx base addresses
+#define GPIO_OFFSET                             0x400UL
 
-//--------------
+
+
 //EXTI                                        //@ref to EXTI register map
 #define EXTI_BASE 							    0x40010400UL
 
@@ -88,10 +92,7 @@ typedef struct
 {
     uint32_t EVCR;
     uint32_t MAPR;
-    uint32_t EXTICR1;
-    uint32_t EXTICR2;
-    uint32_t EXTICR3;
-    uint32_t EXTICR4;
+    uint32_t EXTICR[4];
     uint32_t MAPR2;
 }AFIO_RegDef_t;
 
@@ -106,6 +107,16 @@ typedef struct
     uint32_t PR;
 }EXTI_RegDef_t;
 
+//NVIC
+typedef struct
+{
+    uint32_t ISER[3];
+}NVIC_Enable_Registers_t;
+
+typedef struct
+{
+    uint32_t ICER[3];
+}NVIC_Disable_Registers_t;
 
 
 //----------------------------------------------------------------------
@@ -115,7 +126,7 @@ typedef struct
 
 //RCC
 //@ref to RCC Instants
-#define RCC                                 ((RCC_RegDef_t*)RCC_BASE)
+#define RCC                                 ((volatile RCC_RegDef_t*)RCC_BASE)
 
 //GPIO
 //@ref to GPIO Instants
@@ -126,11 +137,22 @@ typedef struct
 #define GPIOE                               ((GPIOx_RegDef_t*)GPIOE_BASE)
 //AFIO
 //@ref to AFIO Instants
-#define AFIO                                ((AFIO_RegDef_t*)AFIO_BASE)
+#define AFIO                                ((volatile AFIO_RegDef_t*)AFIO_BASE)
 
 //EXTI
 //@ref to EXTI Instants
-#define EXTI                                ((EXTI_RegDef_t*)EXTI_BASE)
+#define EXTI                                ((volatile EXTI_RegDef_t*)EXTI_BASE)
+
+
+
+
+//NVIC
+// @ref to NVIC register map
+#define NVIC_ISER                           ((volatile NVIC_Enable_Registers_t*)NVIC_BASE)
+#define NVIC_ICER                           ((volatile NVIC_Disable_Registers_t*)NVIC_BASE+0x80UL)
+// @ref NVIC_IQR_NUMBERS
+#define NVIC_ENABLE_IRQ(IRQ_Number)         (NVIC_ISER->ISER[IRQ_Number/32] |= (1 << (IRQ_Number % 32)))
+#define NVIC_DISABLE_IRQ(IRQ_Number)        (NVIC_ICER->ICER[IRQ_Number/32] |= (1 << (IRQ_Number % 32)))                  
 
 
 //----------------------------------------------------------------------
@@ -152,6 +174,52 @@ typedef struct
 #define AFIO_ClockEnable()                  (RCC->APB2ENR |= (1<<0))
 
 //----------------------------------------------------------------------
+//-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
+//External Interrupt Macros:
+//-*-*-*-*-*-*-*-*-*-*-**-*-*-*-*-
+//Line Number
+#define EXTI0  0
+#define EXTI1  1
+#define EXTI2  2
+#define EXTI3  3
+#define EXTI4  4
+#define EXTI5  5
+#define EXTI6  6
+#define EXTI7  7
+#define EXTI8  8
+#define EXTI9  9
+#define EXTI10 10
+#define EXTI11 11
+#define EXTI12 12
+#define EXTI13 13
+#define EXTI14 14
+#define EXTI15 15
+
+// Interrupt request line Number
+// @ref NVIC_IQR_NUMBERS
+#define EXTI0_IRQ   6
+#define EXTI1_IRQ   7
+#define EXTI2_IRQ   8
+#define EXTI3_IRQ   9
+#define EXTI4_IRQ   10
+#define EXTI5_IRQ   23
+#define EXTI6_IRQ   23
+#define EXTI7_IRQ   23
+#define EXTI8_IRQ   23
+#define EXTI9_IRQ   23
+#define EXTI10_IRQ  40
+#define EXTI11_IRQ  40
+#define EXTI12_IRQ  40
+#define EXTI13_IRQ  40
+#define EXTI14_IRQ  40
+#define EXTI15_IRQ  40
+
+
+
+
+
+
+
 //-*-*-*-*-*-*-*-*-*-*-*-
 //Generic Macros:
 //-*-*-*-*-*-*-*-*-*-*-*

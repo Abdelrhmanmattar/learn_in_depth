@@ -1,0 +1,10 @@
+{
+    "files.associations": {
+        "limits": "c",
+        "bit": "c",
+        "compare": "c",
+        "cstddef": "c",
+        "type_traits": "c",
+        "xutility": "c"
+    }
+}

@@ -60,6 +60,7 @@
 //-*-*-*-*-*-*-*-*-*-*-*
 
 //RCC register map and reset values
+// @ref to RCC register map
 typedef struct
 {
     uint32_t CR;
@@ -75,7 +76,7 @@ typedef struct
 }RCC_RegDef_t;
 
 //GPIO
-
+// @ref to GPIO register map
 typedef struct
 {
     uint32_t CRL;
@@ -88,6 +89,7 @@ typedef struct
 }GPIOx_RegDef_t;
 
 //AFIO
+//@ref to AFIO register map
 typedef struct
 {
     uint32_t EVCR;
@@ -97,6 +99,7 @@ typedef struct
 }AFIO_RegDef_t;
 
 //EXTI
+//@ref to EXTI register map
 typedef struct
 {
     uint32_t IMR;
@@ -108,6 +111,7 @@ typedef struct
 }EXTI_RegDef_t;
 
 //NVIC
+// @ref to NVIC register map
 typedef struct
 {
     uint32_t ISER[3];
@@ -161,6 +165,7 @@ typedef struct
 //-*-*-*-*-*-*-*-*-*-*-*
 
 //GPIOx
+// @ref to GPIO Clock enable
 #define GPIOA_ClockEnable()                 (RCC->APB2ENR |= (1<<2))
 #define GPIOB_ClockEnable()                 (RCC->APB2ENR |= (1<<3))
 #define GPIOC_ClockEnable()                 (RCC->APB2ENR |= (1<<4))
@@ -178,6 +183,7 @@ typedef struct
 //External Interrupt Macros:
 //-*-*-*-*-*-*-*-*-*-*-**-*-*-*-*-
 //Line Number
+// @ref EXTI_LINE_NUMBERS
 #define EXTI0  0
 #define EXTI1  1
 #define EXTI2  2

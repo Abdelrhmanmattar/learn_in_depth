@@ -9,6 +9,7 @@
 //-----------------------------
 //LCD Commands
 //-----------------------------
+//@ref LCD_COMMANDS
 #define LCD_FUNCTION_8BIT_2LINES   					(0x38)
 #define LCD_FUNCTION_4BIT_2LINES   					(0x28)
 #define LCD_MOVE_DISP_RIGHT       					(0x1C)
@@ -37,10 +38,56 @@
 //-----------------------------
 //LCD Functions
 //-----------------------------
-
+/**================================================================
+* @Fn- LCD_Init
+* @brief - Initialize the LCD based on the configuration in LCD_CONFIG.h
+* @param [in] - None
+* @param [out] - None
+* @retval - None
+* Note-
+*/
 void LCD_Init(void);
+/**================================================================
+* @Fn- LCD_SendCommand
+* @brief - Send command to the LCD
+* @param [in] - LCD_COMMAND @ref LCD_COMMANDS
+* @param [out] - None
+* @retval - None
+* Note-
+*/
 void LCD_SendCommand(uint8_t command);
+/**================================================================
+* @Fn- LCD_Sendchar
+* @brief - Send character to the LCD
+* @param [in] - data:ascii code of the character
+* @param [out] - None
+* @retval - None
+* Note-
+*/
 void LCD_Sendchar(uint8_t data);
+/**================================================================
+* @Fn- LCD_SendString
+* @brief - Send string to the LCD
+* @param [in] - data: pointer to the string
+* @param [out] - None
+* @retval - None
+* Note-
+*/
 void LCD_SendString(const uint8_t *data);
+/**================================================================
+* @Fn- LCD_GoToXY
+* @brief - Go to the specified position on the LCD
+* @param [in] - x: row number
+* @param [in] - y: column number
+* @retval - None
+* Note-x,y starts from 0 & different LCDs have different row and column numbers
+*/
 void LCD_GoToXY(uint8_t x, uint8_t y);
+/**================================================================
+* @Fn- LCD_EnablePulse
+* @brief - Generate enable pulse for the LCD in EN_PIN of LCD_CONTROL_PORT
+* @param [in] - None
+* @retval - None
+* Note-
+*/
 void LCD_ENABLE_PULSE(void);

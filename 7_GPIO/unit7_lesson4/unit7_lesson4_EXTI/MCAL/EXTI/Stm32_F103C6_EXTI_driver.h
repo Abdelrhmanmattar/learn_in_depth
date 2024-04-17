@@ -150,8 +150,33 @@ typedef struct
 //APIs Supported by this driver
 //====================================
 
+/**================================================================
+* @Fn- EXTI_INIT
+* @brief - This function is used to initialize the EXTI line based on the configuration provided by the user
+* @param [in] - pEXTI_PIN_Config : pointer to the EXTI_PIN_Config_t structure
+* @param [out] - None
+* @retval - None
+* Note-
+*/
 void EXTI_INIT(EXTI_PIN_Config_t *pEXTI_PIN_Config);
+/**================================================================
+* @Fn- EXTI_DeInit
+* @brief - This function is used to deinitialize the EXTI line (Reset the EXTI registers)
+* @param [in] - None
+* @param [out] - None
+* @retval - None
+* Note- THIS FUNCTION WILL RESET ALL THE EXTI REGISTERS
+*/
 void EXTI_DeInit(void);
+
+/**================================================================
+* @Fn- EXTI_UPDATE
+* @brief - This function is used to update the EXTI line based on the configuration provided by the user
+* @param [in] - pEXTI_PIN_Config : pointer to the EXTI_PIN_Config_t structure
+* @param [out] - None
+* @retval - None
+* Note-
+*/
 void EXTI_UPDATE(EXTI_PIN_Config_t *pEXTI_PIN_Config);
 
 

@@ -21,15 +21,17 @@ typedef enum
 //-------------------------
 typedef struct
 {
-    GPIOx_RegDef_t *pGPIOx;
-    uint8_t start_pin;
+    // pointer to the GPIOx
+    GPIOx_RegDef_t *pGPIOx; // in stm32f103x6.h @ref to GPIO Instants 
+    // pin number
+    uint8_t start_pin; // in Stm32_F103C6_gpio_driver.h @ref GPIO_PIN_NUMBERS
     segment_7_comman_t comman;
 } segment_7_t;
 
 //-------------------------
 // number to display
 //-------------------------
-//  0x3f,0x06,0x5b,0x4f,0x66,0x6d,0x7d,0x47,0x7f,0x6f
+// @ref numbers_of_segment_7
 #define SEGMENT_7_ZERO 0x3f
 #define SEGMENT_7_ONE 0x06
 #define SEGMENT_7_TWO 0x5b
@@ -53,7 +55,25 @@ typedef struct
 // Function Prototypes
 //-------------------------
 
+/**================================================================
+* @Fn- segment_7_init
+* @brief - Initialize the segment 7
+* @param [in] - segment_7_t *pSegment_7 for configuration of segment 7
+* @param [out] - None
+* @retval - None
+* Note-
+*/
+
 void segment_7_init(segment_7_t *pSegment_7);
+
+/**================================================================
+* @Fn- segment_7_display
+* @brief - to display the number on segment 7
+* @param [in] - segment_7_t *pSegment_7 for configuration of segment 7
+* @param [in] - uint8_t number to display // @ref numbers_of_segment_7
+* @retval - None
+* Note-
+*/
 void segment_7_display(segment_7_t *pSegment_7, uint8_t number);
 
 
